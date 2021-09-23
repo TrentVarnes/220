@@ -6,36 +6,39 @@ Certification of authenticity
 I certify this is my work
 """
 
-#Program will calculate the RMS average, Harmonic mean, and Geometric mean
+# Program will calculate the RMS average, Harmonic mean, and Geometric mean
 
 import math
 
+
 def main():
-    numb = eval(input("enter the amount of numbers here: "))
-    total = 0
-    for numb_value in range(numb):
-        numb_value = eval(input("enter the value for the numbers here: "))
-        total = total + numb_value**2
-    rms_average = math.sqrt(total / numb)
-    print("rms average", round(rms_average, 3))
+    numb = int(input("enter the amount of numbers here: "))
+    har_acc = 0
+    geo_acc = 1
+    rms_acc = 0
+    list_1 = []
+    for numb_range in range(numb):
+        #rms
+        numb_value = float(input("enter the value for the numbers here: "))
+        squarer = numb_value**2
+        rms_acc += squarer
 
+       #harmonic mean
+        division = 1 / numb_value
+        har_acc += division
+        #geometric mean
+        list_1.append(numb_value)
+        geo_acc = geo_acc * numb_value
 
-    amount = eval(input("enter the amount of numbers here: "))
-    total1 = 0
-    for value in range(amount):
-        value = eval(input("enter the value of the numbers: "))
-        total1 = total1 + 1 / value
-    har_m = float(amount / total1)
-    print("The harmonic mean is", har_m)
+    average = rms_acc / numb
+    rms_average = round(math.sqrt(average), 3)
+    har_m = round(numb / har_acc, 3)
+    geo_m = round(geo_acc ** (1 / numb), 3)
 
+    print(float(rms_average))
+    print(float(har_m))
+    print(float(geo_m))
 
-    amount_o = eval(input("enter the amount of numbers here: "))
-    product = 1
-    for value_o in range(amount_o):
-        value_o = eval(input("enter the value of the number here: "))
-        product = product * value_o
-        geo_m = (product)**(1 / amount_o)
-    print(round(geo_m, 1))
 
 if __name__ == '__main__':
     main()
