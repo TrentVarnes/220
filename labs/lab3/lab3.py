@@ -39,7 +39,7 @@ def sequence():
     series = eval(input("enter number of terms in a series: "))
     for i in range(series):
         y = 1 + ((i +1) // 2 * 2)
-        print(y)
+        print(y, end='')
 if __name__ == '__sequence__':
     sequence()
 

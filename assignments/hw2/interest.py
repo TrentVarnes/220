@@ -20,7 +20,7 @@ def main():
     step_2 = payment_amount * (number_of_days_in_billing_cycle - day_payment_was_made)
     step_3 = step_1 - step_2
     step_4 = step_3 / number_of_days_in_billing_cycle
-    monthly_interest_rate = annual_interest_rate / 12 /100
+    monthly_interest_rate = annual_interest_rate / 12 / 100
     monthly_interest_charge = step_4 * monthly_interest_rate
     answer = round(monthly_interest_charge, 2)
     print(answer)
