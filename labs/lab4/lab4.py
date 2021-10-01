@@ -96,6 +96,7 @@ def circle():
     c.draw(win)
     radius_txt = Text(Point(200, 390), "The radius is " + str(radius))
     radius_txt.draw(win)
+    p1.mo
 
     win.getMouse()
     win.close()
