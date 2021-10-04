@@ -11,17 +11,17 @@ def main():
     acc_cars = 0
     total = 0
     for i in range(roads):
-        list1.append(input("road"))
-        days = eval(input("How many days was road" + str(i + 1) + "surveyed?"))
+        list1.append(input("road number?"))
+        days = eval(input("How many days was road " + str(i + 1) + " surveyed?"))
         for j in range(days):
-            cars = eval(input("How many cars traveled on day" + str(j + 1) + "?"))
+            cars = eval(input("How many cars traveled on day " + str(j + 1) + "?"))
             acc_cars += cars
         day_average = acc_cars / days
         print("total cars traveled is : " + str(acc_cars))
         total += acc_cars
         acc_cars = 0
-        print("road", roads, "average cars per day : ", round(day_average))
-    total_average = float(total / roads)
+        print("road", roads, "average cars per day : ", day_average)
+    total_average = total / roads
     print("total number of vehicles: ", total)
     print("average number of cars per road: ", round(total_average, 2))
 
