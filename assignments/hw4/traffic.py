@@ -7,11 +7,9 @@ I certify this is entirely my own work
 
 def main():
     roads = eval(input("enter the number of roads surveyed: "))
-    list1 = []
     acc_cars = 0
     total = 0
     for i in range(roads):
-        list1.append(input("road number?"))
         days = eval(input("How many days was road " + str(i + 1) + " surveyed?"))
         for j in range(days):
             cars = eval(input("How many cars traveled on day " + str(j + 1) + "?"))
