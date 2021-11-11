@@ -1,0 +1,6 @@
+listen
+name
+trait
+biology
+sociology
+alphabet
