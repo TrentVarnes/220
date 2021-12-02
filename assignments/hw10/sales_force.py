@@ -22,8 +22,7 @@ class SalesForce:
     def quota_report(self, quota):
         people = []
         for person in self.sales_people:
-            if person.met_quota(quota):
-                people.append([person.get_name()])
+            people.append([person.get_id(), person.get_name(), person.get_sales(), person.met_quota(quota)])
         return people
 
     def top_seller(self):
